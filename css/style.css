@@ -25,17 +25,27 @@ body{
 }
 
 .container{
+  background:url('https://hellofuture.orange.com/app/uploads/2018/01/Intro-HELLO-FUTURE-1920x1080_v2.gif') no-repeat  ;
+  background-size: cover;
   padding:9%;
-  text-align: center;
+  text-align:left;
   position: relative;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: stretch;
 }
 
 .container .text{
   color:#fff3;
   font-size: 8vw;
+  text-transform: capitalize;
+  padding:30px;
+  cursor: pointer;
+}
+
+.container .text1{
+  color:#fff3;
+  font-size: 4vw;
   text-transform: capitalize;
   padding:30px;
   cursor: pointer;
@@ -48,12 +58,25 @@ body{
   text-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 
+.container .text1:hover{
+  color:#fff;
+  position: relative;
+  z-index: 100;
+  text-shadow: 0 5px 10px rgba(0,0,0,.7);
+}
+
 .container .text:hover ~ .hover-img{
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
+.container .text1:hover ~ .hover-img{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
 .hover-img{
+  display: flex;
   position: absolute;
   top:0; left:0;
   transform: translate(-50%, -50%) scale(.5);
@@ -61,3 +84,17 @@ body{
   pointer-events: none;
   z-index: 10;
 }
+/* 
+@media screen and ( max-width:1024 ){
+  .hover-img{
+    width:40%;
+    display: flex;
+  position: absolute;
+  top:0; left:0;
+  transform: translate(-50%, -50%) scale(.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  }
+
+} */
